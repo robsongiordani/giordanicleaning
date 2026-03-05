@@ -6,12 +6,42 @@
 }
 
 body {
-  background:
-    linear-gradient(#e9f8ff, #cfefff),
-    url("https://www.transparenttextures.com/patterns/bubbles.png");
-  background-repeat: repeat;
-  background-size: auto;
+  background: linear-gradient(#e9f8ff, #cfefff);
   color: #333;
+  position: relative;
+}
+
+/* bolhas decorativas */
+body::before {
+  content: "";
+  position: fixed;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(
+    circle,
+    rgba(120, 200, 255, 0.4),
+    transparent 70%
+  );
+  border-radius: 50%;
+  top: 80px;
+  left: 80px;
+  z-index: -1;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(
+    circle,
+    rgba(120, 200, 255, 0.35),
+    transparent 70%
+  );
+  border-radius: 50%;
+  bottom: 100px;
+  right: 100px;
+  z-index: -1;
 }
 
 /* header */
