@@ -43,8 +43,8 @@ header {
 }
 
 .logo {
-  width: 420px;
-  max-width: 90%;
+  width: 320px;
+  max-width: 100%;
 }
 
 .caricatura {
@@ -180,4 +180,54 @@ footer {
   text-align: center;
   padding: 25px;
   margin-top: 40px;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  left: 40px;
+  top: 120px;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle at 30% 30%, #bde9ff, #7fd3ff);
+  border-radius: 50%;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  right: 40px;
+  top: 200px;
+  width: 160px;
+  height: 160px;
+  background: radial-gradient(circle at 30% 30%, #bde9ff, #7fd3ff);
+  border-radius: 50%;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  left: 10%;
+  top: 20%;
+  width: 60px;
+  height: 60px;
+  background: #a6e3ff;
+  border-radius: 50%;
+  opacity: 0.3;
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  right: 10%;
+  top: 30%;
+  width: 40px;
+  height: 40px;
+  background: #a6e3ff;
+  border-radius: 50%;
+  opacity: 0.3;
 }
