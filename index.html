@@ -17,6 +17,24 @@
     />
 
     <style>
+      .header-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .logo {
+        width: 140px;
+        margin-bottom: 10px;
+      }
+
+      .caricatura {
+        width: 160px;
+        border-radius: 50%;
+        border: 4px solid white;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      }
       body {
         margin: 0;
         font-family: "Poppins", sans-serif;
@@ -26,39 +44,24 @@
 
       /* HEADER */
 
-      header {
-        background: linear-gradient(135deg, #0d6efd, #0047ab);
-        color: white;
-        text-align: center;
-        padding: 80px 20px;
-      }
+      <div class="header-container">
 
-      header h1 {
-        font-size: 42px;
-        margin-bottom: 10px;
-      }
+<img src="images/logo.png" class="logo" alt="Logo Giordani Cleaning">
 
-      header p {
-        font-size: 18px;
-        opacity: 0.9;
-      }
+<img src="images/caricatura.png" class="caricatura" alt="Equipe Giordani Cleaning">
 
-      .btn {
-        display: inline-block;
-        margin-top: 25px;
-        padding: 14px 30px;
-        background: #25d366;
-        color: white;
-        text-decoration: none;
-        border-radius: 50px;
-        font-weight: 600;
-        transition: 0.3s;
-      }
+<h1>Giordani Cleaning</h1>
 
-      .btn:hover {
-        transform: scale(1.05);
-        background: #1ebe5d;
-      }
+<p>Limpeza profissional, pós-obra e pequenas manutenções com qualidade e confiança.</p>
+
+<a class="btn" href="https://wa.me/5547991833664?text=Olá,%20quero%20um%20orçamento." target="_blank">
+Solicitar Orçamento no WhatsApp
+</a>
+
+</div>
+
+</header>
+      
 
       /* SEÇÕES */
 
