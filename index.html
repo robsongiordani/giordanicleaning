@@ -1,67 +1,67 @@
 <!doctype html>
-
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>
-      Giordani Cleaning | Limpeza Profissional em Residências e Empresas
-    </title>
+    <title>Giordani Cleaning | Limpeza Profissional</title>
 
     <meta
       name="description"
-      content="Limpeza residencial, comercial, pós-obra e pequenas manutenções. Atendimento profissional com qualidade e confiança."
+      content="Limpeza residencial, comercial e serviços de marido de aluguel. Atendimento rápido pelo WhatsApp."
     />
-
-    <meta name="robots" content="index, follow" />
+    <meta
+      name="keywords"
+      content="limpeza residencial, limpeza comercial, marido de aluguel, limpeza profissional"
+    />
+    <meta name="author" content="Giordani Cleaning" />
 
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"
       rel="stylesheet"
     />
 
     <style>
-      body {
+      * {
         margin: 0;
+        padding: 0;
+        box-sizing: border-box;
         font-family: "Poppins", sans-serif;
-        background: #e8f4ff;
+      }
+
+      body {
+        background: #cfefff;
         color: #333;
       }
 
       header {
-        background: linear-gradient(135deg, #0d6efd, #0051c7);
-        color: white;
-        padding: 70px 20px;
+        background: white;
+        padding: 30px;
         text-align: center;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
       }
 
       .header-container {
         display: flex;
-        justify-content: center;
         align-items: center;
-        ap: 30px;
-        margin-bottom: 20px;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
       }
 
       .logo {
-        width: 140px;
+        width: 180px;
+        mix-blend-mode: multiply;
       }
 
       .caricatura {
-        width: 140px;
+        width: 150px;
         border-radius: 50%;
-        border: 4px solid white;
       }
 
-      header h1 {
+      h1 {
         font-size: 40px;
-        margin: 10px 0;
-      }
-
-      header p {
-        font-size: 18px;
-        max-width: 700px;
+        color: #0b4d91;
       }
 
       .btn {
@@ -70,10 +70,9 @@
         padding: 15px 30px;
         background: #25d366;
         color: white;
+        font-weight: bold;
+        border-radius: 30px;
         text-decoration: none;
-        border-radius: 8px;
-        font-weight: 600;
-        font-size: 18px;
         transition: 0.3s;
       }
 
@@ -82,245 +81,178 @@
       }
 
       section {
-        padding: 80px 20px;
+        padding: 60px 20px;
+        max-width: 1200px;
+        margin: auto;
+      }
+
+      h2 {
         text-align: center;
-      }
-
-      section h2 {
-        font-size: 34px;
         margin-bottom: 40px;
+        color: #0b4d91;
       }
 
-      .services {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+      .servicos {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 25px;
       }
 
       .card {
         background: white;
-        padding: 30px;
-        width: 260px;
+        padding: 25px;
         border-radius: 15px;
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
         transition: 0.3s;
       }
 
       .card:hover {
-        transform: translateY(-10px);
+        transform: translateY(-8px);
       }
 
-      .card h3 {
-        color: #0d6efd;
-        margin-bottom: 10px;
+      .galeria {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
       }
 
-      .gallery {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 25px;
-      }
-
-      .gallery img {
-        width: 280px;
-        border-radius: 15px;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-        transition: 0.4s;
-      }
-
-      .gallery img:hover {
-        transform: scale(1.06);
+      .galeria img {
+        width: 100%;
+        border-radius: 10px;
       }
 
       .depoimentos {
-        max-width: 900px;
-        margin: auto;
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 20px;
-        justify-content: center;
       }
 
       .depoimento {
         background: white;
-        padding: 25px;
-        border-radius: 12px;
+        padding: 20px;
+        border-radius: 10px;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        width: 260px;
       }
 
-      .depoimento strong {
-        color: #0d6efd;
+      iframe {
+        width: 100%;
+        border-radius: 10px;
       }
 
-      .mapa {
-        margin-top: 40px;
-        border-radius: 15px;
-        overflow: hidden;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-      }
-
-      footer {
-        background: #111;
-        color: white;
-        padding: 30px;
-        text-align: center;
-        font-size: 14px;
-      }
-
-      .whatsapp-float {
+      .whatsapp {
         position: fixed;
-        width: 65px;
-        height: 65px;
         bottom: 20px;
         right: 20px;
         background: #25d366;
         color: white;
-        border-radius: 50%;
-        text-align: center;
-        font-size: 32px;
-        line-height: 65px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        padding: 15px 20px;
+        border-radius: 50px;
+        font-size: 18px;
         text-decoration: none;
-        z-index: 999;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
       }
 
-      @media (max-width: 768px) {
-        .services {
-          flex-direction: column;
-          align-items: center;
-        }
-
-        .gallery img {
-          width: 90%;
-        }
+      footer {
+        background: #0b4d91;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        margin-top: 40px;
       }
     </style>
   </head>
 
   <body>
     <header>
-      <header>
+      <div class="header-container">
+        <img src="images/logo.png" class="logo" />
 
-<div class="header-container">
+        <img src="images/caricatura.png" class="caricatura" />
+      </div>
 
-<img src="images/logo.png" class="logo" alt="Logo Giordani Cleaning">
+      <h1>Giordani Cleaning</h1>
 
-<img src="images/caricatura.png" class="caricatura" alt="Equipe Giordani Cleaning">
+      <p>Limpeza profissional residencial e comercial</p>
 
-</div>
-
-<h1>Giordani Cleaning</h1>
-
-<p>
-Limpeza profissional, pós-obra e pequenas manutenções com qualidade e confiança.
-</p>
-
-<a class="btn" 
-href="https://wa.me/5547991833664?text=Olá,%20quero%20um%20orçamento."
-target="_blank">
-
-Solicitar Orçamento no WhatsApp
-
-</a>
-
-</header>
+      <a class="btn" href="https://wa.me/5547991833664" target="_blank">
+        Solicitar Orçamento no WhatsApp
+      </a>
+    </header>
 
     <section>
       <h2>Nossos Serviços</h2>
 
-      <div class="services">
+      <div class="servicos">
         <div class="card">
           <h3>Limpeza Residencial</h3>
-          <p>
-            Deixe sua casa impecável com limpeza profunda e organização
-            completa.
-          </p>
+          <p>Limpeza completa para casas e apartamentos.</p>
         </div>
 
         <div class="card">
           <h3>Limpeza Comercial</h3>
-          <p>
-            Ambientes empresariais higienizados e organizados para causar boa
-            impressão.
-          </p>
+          <p>Escritórios, lojas e ambientes empresariais.</p>
         </div>
 
         <div class="card">
-          <h3>Limpeza Pós-Obra</h3>
-          <p>Remoção completa de poeira, cimento e resíduos de construção.</p>
+          <h3>Pós-obra</h3>
+          <p>Limpeza pesada após reformas ou construções.</p>
         </div>
 
         <div class="card">
-          <h3>Pequenas Manutenções</h3>
+          <h3>Marido de Aluguel</h3>
           <p>
-            Serviços de marido de aluguel: torneiras, chuveiros, reparos e
-            ajustes.
+            Pequenas manutenções, instalação de suportes, cortinas e reparos.
           </p>
         </div>
       </div>
     </section>
 
     <section>
-      <h2>Resultados do Nosso Trabalho</h2>
+      <h2>Antes e Depois</h2>
 
-      <div class="gallery">
-        <img src="images/antesedepois.jpeg" alt="Antes e depois limpeza" />
+      <div class="galeria">
+        <img src="images/antes1.jpg" />
+        <img src="images/depois1.jpg" />
 
-        <img src="images/antesedepois2.jpeg" alt="Resultado limpeza" />
-
-        <img src="images/sujeiraempregnada.jpeg" alt="Limpeza pesada" />
-
-        <img
-          src="images/sujeiraempregnada2.jpeg"
-          alt="Resultado limpeza profissional"
-        />
+        <img src="images/antes2.jpg" />
+        <img src="images/depois2.jpg" />
       </div>
     </section>
 
     <section>
-      <h2>O que nossos clientes dizem</h2>
+      <h2>Depoimentos</h2>
 
       <div class="depoimentos">
         <div class="depoimento">
-          ⭐⭐⭐⭐⭐
-          <p>Serviço impecável. Minha casa ficou perfeita!</p>
-          <strong>Mariana</strong>
+          ⭐️⭐️⭐️⭐️⭐️ "Serviço excelente, minha casa ficou impecável!"
         </div>
 
         <div class="depoimento">
-          ⭐⭐⭐⭐⭐
-          <p>Profissionais pontuais e muito caprichosos.</p>
-          <strong>Carlos</strong>
+          ⭐️⭐️⭐️⭐️⭐️ "Equipe muito profissional e pontual."
         </div>
 
         <div class="depoimento">
-          ⭐⭐⭐⭐⭐
-          <p>Contratei para pós-obra e ficou tudo perfeito.</p>
-          <strong>Juliana</strong>
+          ⭐️⭐️⭐️⭐️⭐️ "Recomendo muito, limpeza perfeita!"
         </div>
       </div>
     </section>
 
     <section>
-      <h2>Atendemos na Região</h2>
+      <h2>Localização</h2>
 
-      <div class="mapa">
-        <iframe
-          src="https://maps.google.com/maps?q=joinville&t=&z=13&ie=UTF8&iwloc=&output=embed"
-          width="100%"
-          height="350"
-          style="border: 0"
-          loading="lazy"
-        >
-        </iframe>
-      </div>
+      <iframe
+        src="https://www.google.com/maps?q=Santa+Catarina&output=embed"
+        height="400"
+      >
+      </iframe>
     </section>
 
-    <footer>© 2026 Giordani Cleaning Todos os direitos reservados</footer>
+    <a class="whatsapp" href="https://wa.me/5547991833664" target="_blank">
+      WhatsApp
+    </a>
 
-    <a href="https://wa.me/5547991833664" class="whatsapp-float"> 💬 </a>
+    <footer>
+      <p>© 2026 Giordani Cleaning - Todos os direitos reservados</p>
+    </footer>
   </body>
 </html>
