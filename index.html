@@ -23,210 +23,17 @@
       rel="stylesheet"
     />
 
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: "Poppins", sans-serif;
-      }
-
-      body {
-        background: linear-gradient(#e9f8ff, #cfefff);
-        color: #333;
-      }
-
-      /* decoração gotas */
-
-      body::before {
-        content: "";
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-image: url("https://www.transparenttextures.com/patterns/bubbles.png");
-        opacity: 0.08;
-        z-index: -1;
-      }
-
-      /* header */
-
-      header {
-        background: white;
-        padding: 40px;
-        text-align: center;
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-      }
-
-      .header-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 40px;
-        flex-wrap: wrap;
-      }
-
-      .logo {
-        width: 260px;
-      }
-
-      .caricatura {
-        width: 200px;
-        border-radius: 50%;
-      }
-
-      /* titulo */
-
-      h1 {
-        font-family: "Pacifico", cursive;
-        font-size: 60px;
-        color: #0b4d91;
-        margin-top: 10px;
-      }
-
-      header p {
-        font-size: 20px;
-        margin-top: 10px;
-      }
-
-      /* botão */
-
-      .btn {
-        display: inline-block;
-        margin-top: 25px;
-        padding: 16px 35px;
-        background: #25d366;
-        color: white;
-        font-weight: bold;
-        border-radius: 40px;
-        text-decoration: none;
-        font-size: 18px;
-        transition: 0.3s;
-      }
-
-      .btn:hover {
-        transform: scale(1.05);
-      }
-
-      /* sections */
-
-      section {
-        padding: 70px 20px;
-        max-width: 1200px;
-        margin: auto;
-      }
-
-      h2 {
-        text-align: center;
-        margin-bottom: 40px;
-        font-size: 32px;
-        color: #0b4d91;
-      }
-
-      /* serviços */
-
-      .servicos {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 25px;
-      }
-
-      .card {
-        background: white;
-        padding: 25px;
-        border-radius: 15px;
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-        transition: 0.3s;
-      }
-
-      .card:hover {
-        transform: translateY(-10px);
-      }
-
-      /* galeria */
-
-      .galeria {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        gap: 20px;
-      }
-
-      .galeria img {
-        width: 100%;
-        border-radius: 12px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-      }
-
-      /* sobre */
-
-      .sobre {
-        text-align: center;
-        font-size: 18px;
-        line-height: 1.6;
-        max-width: 900px;
-        margin: auto;
-      }
-
-      /* depoimentos */
-
-      .depoimentos {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        gap: 20px;
-      }
-
-      .depoimento {
-        background: white;
-        padding: 25px;
-        border-radius: 10px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-      }
-
-      /* mapa */
-
-      iframe {
-        width: 100%;
-        border-radius: 10px;
-      }
-
-      /* whatsapp */
-
-      .whatsapp {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        background: #25d366;
-        color: white;
-        padding: 15px 20px;
-        border-radius: 40px;
-        font-size: 18px;
-        text-decoration: none;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-      }
-
-      /* footer */
-
-      footer {
-        background: #0b4d91;
-        color: white;
-        text-align: center;
-        padding: 25px;
-        margin-top: 40px;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
     <header>
       <div class="header-container">
         <img src="images/logo.png" class="logo" />
-
         <img src="images/caricatura.png" class="caricatura" />
       </div>
 
       <h1>Giordani Cleaning</h1>
-
       <p>Limpeza profissional residencial e comercial</p>
 
       <a class="btn" href="https://wa.me/5547991833664" target="_blank">
@@ -236,7 +43,6 @@
 
     <section>
       <h2>Nossos Serviços</h2>
-
       <div class="servicos">
         <div class="card">
           <h3>Limpeza Residencial</h3>
@@ -245,7 +51,6 @@
             Airbnb.
           </p>
         </div>
-
         <div class="card">
           <h3>Limpeza Comercial</h3>
           <p>
@@ -253,24 +58,20 @@
             profissional.
           </p>
         </div>
-
         <div class="card">
           <h3>Limpeza de Vidros</h3>
           <p>Vidros residenciais e comerciais com acabamento impecável.</p>
         </div>
-
         <div class="card">
           <h3>Lavação de Cortinas</h3>
           <p>
             Lavagem cuidadosa para manter suas cortinas limpas e conservadas.
           </p>
         </div>
-
         <div class="card">
           <h3>Pós-obra</h3>
           <p>Remoção de sujeiras pesadas após reformas ou construções.</p>
         </div>
-
         <div class="card">
           <h3>Marido de Aluguel</h3>
           <p>
@@ -282,17 +83,13 @@
 
     <section>
       <h2>Antes e Depois</h2>
-
       <div class="galeria">
         <img src="images/antesedepois.jpeg" />
         <img src="images/antesedepois2.jpeg" />
-
         <img src="images/antesedepoislimpezajanelas.jpeg" />
         <img src="images/removesujeira.jpeg" />
-
         <img src="images/sujeiraempregnada.jpeg" />
         <img src="images/sujeiraempregnada2.jpeg" />
-
         <img src="images/manutencao.jpeg" />
         <img src="images/manutencao2.jpeg" />
       </div>
@@ -300,31 +97,28 @@
 
     <section>
       <h2>Quem Somos</h2>
-
       <p class="sobre">
-        Somos **Robson e Fernanda**, um casal residente em **Balneário Piçarras
-        – SC**. Trabalhamos com **limpeza profissional de casas, apartamentos,
-        imóveis de veraneio, Airbnb e empresas**, além de **limpeza de vidros,
-        lavação de cortinas e pequenos reparos de marido de aluguel**. Nosso
-        compromisso é oferecer **responsabilidade, capricho e confiança**,
-        cuidando do seu lar **como se fosse o nosso**.
+        Somos <strong>Robson e Fernanda</strong>, um casal residente em
+        <strong>Balneário Piçarras – SC</strong>. Trabalhamos com limpeza
+        profissional de casas, apartamentos, imóveis de veraneio, Airbnb e
+        empresas, além de limpeza de vidros, lavação de cortinas e pequenos
+        reparos de marido de aluguel. Nosso compromisso é oferecer
+        responsabilidade, capricho e confiança, cuidando do seu lar como se
+        fosse o nosso.
       </p>
     </section>
 
     <section>
       <h2>Depoimentos</h2>
-
       <div class="depoimentos">
         <div class="depoimento">
           ⭐️⭐️⭐️⭐️⭐️ "Serviço impecável! A casa ficou perfeita. Muito capricho e
           atenção nos detalhes."
         </div>
-
         <div class="depoimento">
           ⭐️⭐️⭐️⭐️⭐️ "Robson e Fernanda são extremamente profissionais e
           confiáveis."
         </div>
-
         <div class="depoimento">
           ⭐️⭐️⭐️⭐️⭐️ "Empresa séria e comprometida. Recomendo para qualquer
           limpeza."
@@ -334,12 +128,13 @@
 
     <section>
       <h2>Atendimento em Balneário Piçarras e Região</h2>
-
       <iframe
-        src="https://www.google.com/maps?q=Balneario+Piçarras+SC&output=embed"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14251.328225330372!2d-48.654763!3d-26.758414!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94d9291f04415f33%3A0x868e6f39e6580f5c!2zQmFsbmXDoXJpbyBQaX_Dp2FycmFzLCBTQw!5e0!3m2!1spt-BR!2sbr!4v1710000000000!5m2!1spt-BR!2sbr"
         height="400"
-      >
-      </iframe>
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+      ></iframe>
     </section>
 
     <a class="whatsapp" href="https://wa.me/5547991833664" target="_blank">
