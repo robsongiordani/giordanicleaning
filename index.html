@@ -1,22 +1,41 @@
 <!doctype html>
+
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Giordani Cleaning | Limpeza Profissional</title>
+    <title>
+      Giordani Cleaning | Limpeza Profissional em Residências e Empresas
+    </title>
+
     <meta
       name="description"
-      content="Limpeza residencial, comercial, pós-obra e pequenas manutenções. Atendimento profissional, rápido e com garantia de qualidade."
+      content="Limpeza residencial, comercial, pós-obra e pequenas manutenções. Atendimento profissional com qualidade e confiança."
     />
 
-    <!-- Fonte Moderna -->
+    <meta name="robots" content="index, follow" />
+
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
 
     <style>
+      body {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        background: #f4f6f8;
+        color: #333;
+      }
+
+      header {
+        background: linear-gradient(135deg, #0d6efd, #0051c7);
+        color: white;
+        padding: 70px 20px;
+        text-align: center;
+      }
+
       .header-container {
         display: flex;
         flex-direction: column;
@@ -25,57 +44,52 @@
       }
 
       .logo {
-        width: 140px;
-        margin-bottom: 10px;
+        width: 150px;
       }
 
       .caricatura {
-        width: 160px;
+        width: 170px;
         border-radius: 50%;
-        border: 4px solid white;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-      }
-      body {
-        margin: 0;
-        font-family: "Poppins", sans-serif;
-        background: #f4f6f8;
-        color: #333;
+        border: 5px solid white;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
       }
 
-      /* HEADER */
+      header h1 {
+        font-size: 40px;
+        margin: 10px 0;
+      }
 
-      <div class="header-container">
+      header p {
+        font-size: 18px;
+        max-width: 700px;
+      }
 
-<img src="images/logo.png" class="logo" alt="Logo Giordani Cleaning">
+      .btn {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 15px 30px;
+        background: #25d366;
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 18px;
+        transition: 0.3s;
+      }
 
-<img src="images/caricatura.png" class="caricatura" alt="Equipe Giordani Cleaning">
-
-<h1>Giordani Cleaning</h1>
-
-<p>Limpeza profissional, pós-obra e pequenas manutenções com qualidade e confiança.</p>
-
-<a class="btn" href="https://wa.me/5547991833664?text=Olá,%20quero%20um%20orçamento." target="_blank">
-Solicitar Orçamento no WhatsApp
-</a>
-
-</div>
-
-</header>
-      
-
-      /* SEÇÕES */
+      .btn:hover {
+        transform: scale(1.05);
+      }
 
       section {
-        padding: 70px 20px;
+        padding: 80px 20px;
         text-align: center;
       }
 
       section h2 {
-        font-size: 32px;
+        font-size: 34px;
         margin-bottom: 40px;
       }
-
-      /* SERVIÇOS */
 
       .services {
         display: flex;
@@ -86,23 +100,21 @@ Solicitar Orçamento no WhatsApp
 
       .card {
         background: white;
-        padding: 25px;
+        padding: 30px;
         width: 260px;
         border-radius: 15px;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
         transition: 0.3s;
       }
 
       .card:hover {
-        transform: translateY(-8px);
+        transform: translateY(-10px);
       }
 
       .card h3 {
-        margin-bottom: 10px;
         color: #0d6efd;
+        margin-bottom: 10px;
       }
-
-      /* GALERIA */
 
       .gallery {
         display: flex;
@@ -112,35 +124,51 @@ Solicitar Orçamento no WhatsApp
       }
 
       .gallery img {
-        width: 260px;
+        width: 280px;
         border-radius: 15px;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-        transition: 0.3s;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        transition: 0.4s;
       }
 
       .gallery img:hover {
-        transform: scale(1.05);
+        transform: scale(1.06);
       }
 
-      /* DIFERENCIAIS */
-
-      .diferenciais {
-        max-width: 800px;
+      .depoimentos {
+        max-width: 900px;
         margin: auto;
-        font-size: 18px;
-        line-height: 1.8;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
       }
 
-      /* FOOTER */
+      .depoimento {
+        background: white;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        width: 260px;
+      }
+
+      .depoimento strong {
+        color: #0d6efd;
+      }
+
+      .mapa {
+        margin-top: 40px;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      }
 
       footer {
         background: #111;
         color: white;
-        padding: 25px;
+        padding: 30px;
         text-align: center;
+        font-size: 14px;
       }
-
-      /* BOTÃO WHATSAPP FLUTUANTE */
 
       .whatsapp-float {
         position: fixed;
@@ -148,24 +176,16 @@ Solicitar Orçamento no WhatsApp
         height: 65px;
         bottom: 20px;
         right: 20px;
-        background-color: #25d366;
+        background: #25d366;
         color: white;
         border-radius: 50%;
         text-align: center;
-        font-size: 30px;
+        font-size: 32px;
         line-height: 65px;
-        box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
-        z-index: 1000;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         text-decoration: none;
-        transition: 0.3s;
+        z-index: 999;
       }
-
-      .whatsapp-float:hover {
-        transform: scale(1.1);
-        background-color: #1ebe5d;
-      }
-
-      /* RESPONSIVO */
 
       @media (max-width: 768px) {
         .services {
@@ -182,86 +202,126 @@ Solicitar Orçamento no WhatsApp
 
   <body>
     <header>
-      <h1>Giordani Cleaning</h1>
-      <p>
-        Limpeza residencial, comercial e pós-obra com excelência e confiança.
-      </p>
-      <a
-        class="btn"
-        href="https://wa.me/5547991833664?text=Olá,%20quero%20um%20orçamento%20para%20limpeza."
-        target="_blank"
-      >
-        Solicitar Orçamento no WhatsApp
-      </a>
+      <div class="header-container">
+        <img src="images/logo.png" class="logo" alt="Logo Giordani Cleaning" />
+
+        <img
+          src="images/caricatura.png"
+          class="caricatura"
+          alt="Equipe Giordani Cleaning"
+        />
+
+        <h1>Giordani Cleaning</h1>
+
+        <p>
+          Especialistas em limpeza residencial, comercial, pós-obra e pequenas
+          manutenções. Profissionalismo, confiança e resultados que fazem a
+          diferença.
+        </p>
+
+        <a
+          class="btn"
+          href="https://wa.me/5547991833664?text=Olá,%20quero%20um%20orçamento."
+          target="_blank"
+        >
+          Solicitar Orçamento no WhatsApp
+        </a>
+      </div>
     </header>
 
     <section>
       <h2>Nossos Serviços</h2>
+
       <div class="services">
         <div class="card">
           <h3>Limpeza Residencial</h3>
           <p>
-            Casas e apartamentos impecáveis, organizados e higienizados com
-            cuidado profissional.
+            Deixe sua casa impecável com limpeza profunda e organização
+            completa.
           </p>
         </div>
 
         <div class="card">
           <h3>Limpeza Comercial</h3>
           <p>
-            Ambientes empresariais limpos e organizados para causar a melhor
+            Ambientes empresariais higienizados e organizados para causar boa
             impressão.
           </p>
         </div>
 
         <div class="card">
-          <h3>Pós-Obra</h3>
-          <p>
-            Remoção completa de resíduos e sujeira pesada após reformas e
-            construções.
-          </p>
+          <h3>Limpeza Pós-Obra</h3>
+          <p>Remoção completa de poeira, cimento e resíduos de construção.</p>
         </div>
 
         <div class="card">
           <h3>Pequenas Manutenções</h3>
           <p>
-            Serviços de marido de aluguel: torneiras, chuveiros, reparos
-            elétricos simples e ajustes gerais.
+            Serviços de marido de aluguel: torneiras, chuveiros, reparos e
+            ajustes.
           </p>
         </div>
       </div>
     </section>
 
     <section>
-      <h2>Antes e Depois</h2>
+      <h2>Resultados do Nosso Trabalho</h2>
 
       <div class="gallery">
         <img src="images/antesedepois.jpeg" alt="Antes e depois limpeza" />
-        <img src="images/antesedepois2.jpeg" alt="Antes e depois limpeza" />
+
+        <img src="images/antesedepois2.jpeg" alt="Resultado limpeza" />
+
         <img src="images/sujeiraempregnada.jpeg" alt="Limpeza pesada" />
-        <img src="images/sujeiraempregnada2.jpeg" alt="Resultado da limpeza" />
+
+        <img
+          src="images/sujeiraempregnada2.jpeg"
+          alt="Resultado limpeza profissional"
+        />
       </div>
     </section>
 
     <section>
-      <h2>Por que escolher a Giordani Cleaning?</h2>
-      <div class="diferenciais">
-        ✔ Profissionais treinados e uniformizados<br />
-        ✔ Atendimento pontual e responsável<br />
-        ✔ Produtos e equipamentos de qualidade<br />
-        ✔ Orçamento rápido e sem compromisso<br />
-        ✔ Garantia de satisfação
+      <h2>O que nossos clientes dizem</h2>
+
+      <div class="depoimentos">
+        <div class="depoimento">
+          ⭐⭐⭐⭐⭐
+          <p>Serviço impecável. Minha casa ficou perfeita!</p>
+          <strong>Mariana</strong>
+        </div>
+
+        <div class="depoimento">
+          ⭐⭐⭐⭐⭐
+          <p>Profissionais pontuais e muito caprichosos.</p>
+          <strong>Carlos</strong>
+        </div>
+
+        <div class="depoimento">
+          ⭐⭐⭐⭐⭐
+          <p>Contratei para pós-obra e ficou tudo perfeito.</p>
+          <strong>Juliana</strong>
+        </div>
       </div>
     </section>
 
-    <footer>© 2026 Giordani Cleaning - Todos os direitos reservados</footer>
+    <section>
+      <h2>Atendemos na Região</h2>
 
-    <a
-      href="https://wa.me/5547991833664?text=Olá,%20quero%20um%20orçamento."
-      class="whatsapp-float"
-      target="_blank"
-    >
-      💬
-    </a>
+      <div class="mapa">
+        <iframe
+          src="https://maps.google.com/maps?q=joinville&t=&z=13&ie=UTF8&iwloc=&output=embed"
+          width="100%"
+          height="350"
+          style="border: 0"
+          loading="lazy"
+        >
+        </iframe>
+      </div>
+    </section>
+
+    <footer>© 2026 Giordani Cleaning Todos os direitos reservados</footer>
+
+    <a href="https://wa.me/5547991833664" class="whatsapp-float"> 💬 </a>
   </body>
 </html>
