@@ -4,20 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Giordani Cleaning | Limpeza Profissional</title>
+    <title>
+      Giordani Cleaning | Limpeza Profissional em Balneário Piçarras
+    </title>
 
     <meta
       name="description"
-      content="Limpeza residencial, comercial e serviços de marido de aluguel. Atendimento rápido pelo WhatsApp."
+      content="Limpeza profissional em Balneário Piçarras SC. Casas, apartamentos, Airbnb, vidros, cortinas e serviços de marido de aluguel."
     />
     <meta
       name="keywords"
-      content="limpeza residencial, limpeza comercial, marido de aluguel, limpeza profissional"
+      content="limpeza balneario piçarras, limpeza residencial, limpeza airbnb, limpeza profissional, marido de aluguel"
     />
     <meta name="author" content="Giordani Cleaning" />
 
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Pacifico&display=swap"
       rel="stylesheet"
     />
 
@@ -30,49 +32,76 @@
       }
 
       body {
-        background: #cfefff;
+        background: linear-gradient(#e9f8ff, #cfefff);
         color: #333;
       }
 
+      /* decoração gotas */
+
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("https://www.transparenttextures.com/patterns/bubbles.png");
+        opacity: 0.08;
+        z-index: -1;
+      }
+
+      /* header */
+
       header {
         background: white;
-        padding: 30px;
+        padding: 40px;
         text-align: center;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
       }
 
       .header-container {
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 30px;
+        gap: 40px;
         flex-wrap: wrap;
       }
 
       .logo {
-        width: 180px;
-        mix-blend-mode: multiply;
+        width: 260px;
       }
 
       .caricatura {
-        width: 150px;
+        width: 200px;
         border-radius: 50%;
       }
 
+      /* titulo */
+
       h1 {
-        font-size: 40px;
+        font-family: "Pacifico", cursive;
+        font-size: 60px;
         color: #0b4d91;
+        margin-top: 10px;
       }
+
+      header p {
+        font-size: 20px;
+        margin-top: 10px;
+      }
+
+      /* botão */
 
       .btn {
         display: inline-block;
-        margin-top: 20px;
-        padding: 15px 30px;
+        margin-top: 25px;
+        padding: 16px 35px;
         background: #25d366;
         color: white;
         font-weight: bold;
-        border-radius: 30px;
+        border-radius: 40px;
         text-decoration: none;
+        font-size: 18px;
         transition: 0.3s;
       }
 
@@ -80,8 +109,10 @@
         transform: scale(1.05);
       }
 
+      /* sections */
+
       section {
-        padding: 60px 20px;
+        padding: 70px 20px;
         max-width: 1200px;
         margin: auto;
       }
@@ -89,8 +120,11 @@
       h2 {
         text-align: center;
         margin-bottom: 40px;
+        font-size: 32px;
         color: #0b4d91;
       }
+
+      /* serviços */
 
       .servicos {
         display: grid;
@@ -107,37 +141,56 @@
       }
 
       .card:hover {
-        transform: translateY(-8px);
+        transform: translateY(-10px);
       }
+
+      /* galeria */
 
       .galeria {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
         gap: 20px;
       }
 
       .galeria img {
         width: 100%;
-        border-radius: 10px;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
       }
+
+      /* sobre */
+
+      .sobre {
+        text-align: center;
+        font-size: 18px;
+        line-height: 1.6;
+        max-width: 900px;
+        margin: auto;
+      }
+
+      /* depoimentos */
 
       .depoimentos {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
         gap: 20px;
       }
 
       .depoimento {
         background: white;
-        padding: 20px;
+        padding: 25px;
         border-radius: 10px;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
       }
+
+      /* mapa */
 
       iframe {
         width: 100%;
         border-radius: 10px;
       }
+
+      /* whatsapp */
 
       .whatsapp {
         position: fixed;
@@ -146,17 +199,19 @@
         background: #25d366;
         color: white;
         padding: 15px 20px;
-        border-radius: 50px;
+        border-radius: 40px;
         font-size: 18px;
         text-decoration: none;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
       }
 
+      /* footer */
+
       footer {
         background: #0b4d91;
         color: white;
         text-align: center;
-        padding: 20px;
+        padding: 25px;
         margin-top: 40px;
       }
     </style>
@@ -185,26 +240,41 @@
       <div class="servicos">
         <div class="card">
           <h3>Limpeza Residencial</h3>
-          <p>Limpeza completa para casas e apartamentos, AirBnb e Veraneio.</p>
+          <p>
+            Limpeza completa de casas, apartamentos, imóveis de veraneio e
+            Airbnb.
+          </p>
         </div>
 
         <div class="card">
           <h3>Limpeza Comercial</h3>
           <p>
-            Escritórios, lojas e ambientes empresariais, limpeza de vidros em
-            geral .
+            Escritórios, lojas e ambientes empresariais com limpeza
+            profissional.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Limpeza de Vidros</h3>
+          <p>Vidros residenciais e comerciais com acabamento impecável.</p>
+        </div>
+
+        <div class="card">
+          <h3>Lavação de Cortinas</h3>
+          <p>
+            Lavagem cuidadosa para manter suas cortinas limpas e conservadas.
           </p>
         </div>
 
         <div class="card">
           <h3>Pós-obra</h3>
-          <p>Limpeza pesada após reformas ou construções.</p>
+          <p>Remoção de sujeiras pesadas após reformas ou construções.</p>
         </div>
 
         <div class="card">
           <h3>Marido de Aluguel</h3>
           <p>
-            Pequenas manutenções, instalação de suportes, cortinas e reparos.
+            Pequenos reparos, instalação de suportes, cortinas e manutenções.
           </p>
         </div>
       </div>
@@ -220,9 +290,25 @@
         <img src="images/antesedepoislimpezajanelas.jpeg" />
         <img src="images/removesujeira.jpeg" />
 
+        <img src="images/sujeiraempregnada.jpeg" />
+        <img src="images/sujeiraempregnada2.jpeg" />
+
         <img src="images/manutencao.jpeg" />
         <img src="images/manutencao2.jpeg" />
       </div>
+    </section>
+
+    <section>
+      <h2>Quem Somos</h2>
+
+      <p class="sobre">
+        Somos **Robson e Fernanda**, um casal residente em **Balneário Piçarras
+        – SC**. Trabalhamos com **limpeza profissional de casas, apartamentos,
+        imóveis de veraneio, Airbnb e empresas**, além de **limpeza de vidros,
+        lavação de cortinas e pequenos reparos de marido de aluguel**. Nosso
+        compromisso é oferecer **responsabilidade, capricho e confiança**,
+        cuidando do seu lar **como se fosse o nosso**.
+      </p>
     </section>
 
     <section>
@@ -230,24 +316,27 @@
 
       <div class="depoimentos">
         <div class="depoimento">
-          ⭐️⭐️⭐️⭐️⭐️ "Serviço excelente, minha casa ficou impecável!"
+          ⭐️⭐️⭐️⭐️⭐️ "Serviço impecável! A casa ficou perfeita. Muito capricho e
+          atenção nos detalhes."
         </div>
 
         <div class="depoimento">
-          ⭐️⭐️⭐️⭐️⭐️ "Equipe muito profissional e pontual."
+          ⭐️⭐️⭐️⭐️⭐️ "Robson e Fernanda são extremamente profissionais e
+          confiáveis."
         </div>
 
         <div class="depoimento">
-          ⭐️⭐️⭐️⭐️⭐️ "Recomendo muito, limpeza perfeita!"
+          ⭐️⭐️⭐️⭐️⭐️ "Empresa séria e comprometida. Recomendo para qualquer
+          limpeza."
         </div>
       </div>
     </section>
 
     <section>
-      <h2>Balneário Piçarras SC</h2>
+      <h2>Atendimento em Balneário Piçarras e Região</h2>
 
       <iframe
-        src="https://www.google.com/maps/place/Balne%C3%A1rio+Pi%C3%A7arras"
+        src="https://www.google.com/maps?q=Balneario+Piçarras+SC&output=embed"
         height="400"
       >
       </iframe>
@@ -258,7 +347,7 @@
     </a>
 
     <footer>
-      <p>© 2026 Giordani Cleaning - Todos os direitos reservados</p>
+      <p>© 2026 Giordani Cleaning - Balneário Piçarras SC</p>
     </footer>
   </body>
 </html>
