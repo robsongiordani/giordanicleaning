@@ -12,70 +12,6 @@ body {
   overflow-x: hidden;
 }
 
-/* bolhas espalhadas */
-body::before {
-  content: "";
-  position: fixed;
-  width: 250px;
-  height: 250px;
-  background: radial-gradient(
-    circle,
-    rgba(120, 200, 255, 0.35),
-    transparent 70%
-  );
-  border-radius: 50%;
-  top: 120px;
-  left: 60px;
-  z-index: -1;
-}
-
-body::after {
-  content: "";
-  position: fixed;
-  width: 350px;
-  height: 350px;
-  background: radial-gradient(
-    circle,
-    rgba(120, 200, 255, 0.3),
-    transparent 70%
-  );
-  border-radius: 50%;
-  bottom: 80px;
-  right: 80px;
-  z-index: -1;
-}
-
-/* bolhas extras */
-header::before {
-  content: "";
-  position: absolute;
-  width: 180px;
-  height: 180px;
-  background: radial-gradient(
-    circle,
-    rgba(120, 200, 255, 0.3),
-    transparent 70%
-  );
-  border-radius: 50%;
-  left: 40px;
-  top: 20px;
-}
-
-header::after {
-  content: "";
-  position: absolute;
-  width: 180px;
-  height: 180px;
-  background: radial-gradient(
-    circle,
-    rgba(120, 200, 255, 0.3),
-    transparent 70%
-  );
-  border-radius: 50%;
-  right: 40px;
-  top: 20px;
-}
-
 /* header */
 header {
   background: white;
@@ -231,4 +167,46 @@ footer {
   text-align: center;
   padding: 25px;
   margin-top: 40px;
+}
+/* BOLHAS DECORATIVAS */
+
+.bolha {
+  position: fixed;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(120, 200, 255, 0.5),
+    transparent 70%
+  );
+  z-index: 0;
+}
+
+/* posições das bolhas */
+
+.b1 {
+  width: 180px;
+  height: 180px;
+  left: 40px;
+  top: 140px;
+}
+
+.b2 {
+  width: 220px;
+  height: 220px;
+  right: 60px;
+  top: 160px;
+}
+
+.b3 {
+  width: 260px;
+  height: 260px;
+  left: 120px;
+  bottom: 60px;
+}
+
+.b4 {
+  width: 200px;
+  height: 200px;
+  right: 120px;
+  bottom: 40px;
 }
