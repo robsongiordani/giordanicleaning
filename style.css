@@ -21,14 +21,113 @@ header {
   position: relative;
 }
 
+/* Ajuste do Header Container para as bolhas orbitarem */
 .header-container {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 40px;
   flex-wrap: wrap;
+  position: relative; /* Necessário para as bolhas se posicionarem aqui */
+  padding: 20px;
 }
 
+/* Estilo Geral das Bolhas/Gotas */
+.bolha {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(120, 200, 255, 0.4),
+    transparent 75%
+  );
+  z-index: 0;
+  pointer-events: none;
+  animation: flutuar 4s ease-in-out infinite alternate;
+}
+
+/* Posicionamento específico no Header */
+.b1 {
+  width: 150px;
+  height: 150px;
+  left: 5%;
+  top: -20px;
+  animation-delay: 0s;
+}
+.b2 {
+  width: 100px;
+  height: 100px;
+  right: 10%;
+  top: 20px;
+  animation-delay: 1s;
+}
+.b3 {
+  width: 130px;
+  height: 130px;
+  left: 20%;
+  bottom: -10px;
+  animation-delay: 2s;
+}
+.b4 {
+  width: 90px;
+  height: 90px;
+  right: 20%;
+  bottom: 10px;
+  animation-delay: 0.5s;
+}
+
+/* Efeito de Marca d'água nas Sections */
+section {
+  position: relative;
+  overflow: hidden; /* Garante que as bolhas não criem barra de rolagem lateral */
+}
+
+section::before {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(
+    circle,
+    rgba(120, 200, 255, 0.08),
+    transparent 70%
+  );
+  top: -100px;
+  right: -150px;
+  z-index: -1;
+}
+
+section:nth-child(even)::after {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(
+    circle,
+    rgba(120, 200, 255, 0.08),
+    transparent 70%
+  );
+  bottom: -50px;
+  left: -100px;
+  z-index: -1;
+}
+
+/* Animação suave de flutuação */
+@keyframes flutuar {
+  from {
+    transform: translateY(0) scale(1);
+  }
+  to {
+    transform: translateY(-15px) scale(1.05);
+  }
+}
+
+/* Ajuste na Logo e Caricatura para ficarem acima das bolhas */
+.logo,
+.caricatura {
+  position: relative;
+  z-index: 1;
+}
 .logo {
   width: 360px;
   max-width: 100%;
@@ -167,116 +266,4 @@ footer {
   text-align: center;
   padding: 25px;
   margin-top: 40px;
-}
-/* BOLHAS DECORATIVAS */
-
-.bolha {
-  position: fixed;
-  border-radius: 50%;
-  background: radial-gradient(
-    circle,
-    rgba(120, 200, 255, 0.5),
-    transparent 70%
-  );
-  z-index: 0;
-}
-
-/* posições das bolhas */
-
-.b1 {
-  width: 180px;
-  height: 180px;
-  left: 40px;
-  top: 140px;
-}
-
-.b2 {
-  width: 220px;
-  height: 220px;
-  right: 60px;
-  top: 160px;
-}
-
-.b3 {
-  width: 260px;
-  height: 260px;
-  left: 120px;
-  bottom: 60px;
-}
-
-.b4 {
-  width: 200px;
-  height: 200px;
-  right: 120px;
-  bottom: 40px;
-}
-/* container das bolhas */
-.bolhas {
-  position: fixed;
-  bottom: -100px;
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  pointer-events: none;
-}
-
-/* bolhas */
-.bolhas span {
-  width: 40px;
-  height: 40px;
-  background: rgba(120, 200, 255, 0.4);
-  border-radius: 50%;
-  animation: subir 15s linear infinite;
-}
-
-/* tamanhos diferentes */
-.bolhas span:nth-child(2) {
-  width: 20px;
-  height: 20px;
-  animation-duration: 12s;
-}
-.bolhas span:nth-child(3) {
-  width: 50px;
-  height: 50px;
-  animation-duration: 18s;
-}
-.bolhas span:nth-child(4) {
-  width: 25px;
-  height: 25px;
-  animation-duration: 10s;
-}
-.bolhas span:nth-child(5) {
-  width: 45px;
-  height: 45px;
-  animation-duration: 20s;
-}
-.bolhas span:nth-child(6) {
-  width: 30px;
-  height: 30px;
-  animation-duration: 14s;
-}
-.bolhas span:nth-child(7) {
-  width: 35px;
-  height: 35px;
-  animation-duration: 16s;
-}
-.bolhas span:nth-child(8) {
-  width: 60px;
-  height: 60px;
-  animation-duration: 22s;
-}
-
-/* animação */
-@keyframes subir {
-  0% {
-    transform: translateY(0);
-    opacity: 0;
-  }
-  20% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-1200px);
-    opacity: 0;
-  }
 }
