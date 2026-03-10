@@ -21,7 +21,22 @@ header {
   position: relative;
 }
 /* parede azulejada de limpeza */
+/* parede azulejada visível */
 header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background-image:
+  linear-gradient(#cfefff 2px, transparent 2px),
+  linear-gradient(90deg, #cfefff 2px, transparent 2px);
+
+  background-size: 60px 60px;
+
+  opacity: 0.6;
+
+  z-index: 0;
+}
   content: "";
   position: absolute;
   inset: 0;
