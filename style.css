@@ -12,164 +12,134 @@ body {
   overflow-x: hidden;
 }
 
-/* header */
+/* HEADER */
+
 header {
   background: white;
   padding: 40px;
   text-align: center;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
   position: relative;
+  overflow: hidden;
 }
-/* parede azulejada de limpeza */
-/* parede azulejada visível */
+
+/* AZULEJOS */
+
 header::before {
   content: "";
   position: absolute;
   inset: 0;
 
   background-image:
-  linear-gradient(#cfefff 2px, transparent 2px),
-  linear-gradient(90deg, #cfefff 2px, transparent 2px);
+    linear-gradient(#8fd3ff 2px, transparent 2px),
+    linear-gradient(90deg, #8fd3ff 2px, transparent 2px);
 
-  background-size: 60px 60px;
-
-  opacity: 0.6;
-
-  z-index: 0;
-}
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0.9) 49%,
-      #dff4ff 50%,
-      rgba(255, 255, 255, 0.9) 51%
-    ),
-    linear-gradient(
-      0deg,
-      rgba(255, 255, 255, 0.9) 49%,
-      #dff4ff 50%,
-      rgba(255, 255, 255, 0.9) 51%
-    );
   background-size: 60px 60px;
   opacity: 0.35;
-  z-index: 0;
+}
+
+/* BRILHO DE LIMPEZA */
+
+header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.6),
+    transparent
+  );
+
+  animation: brilho 6s infinite;
+}
+
+@keyframes brilho {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 150%;
+  }
 }
 
 header * {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
-/* Ajuste do Header Container para as bolhas orbitarem */
+/* HEADER CONTAINER */
+
 .header-container {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 40px;
   flex-wrap: wrap;
-  position: relative; /* Necessário para as bolhas se posicionarem aqui */
+  position: relative;
   padding: 20px;
 }
 
-/* Estilo Geral das Bolhas/Gotas */
+/* BOLHAS */
+
 .bolha {
   position: absolute;
   border-radius: 50%;
   background: radial-gradient(
     circle,
     rgba(120, 200, 255, 0.4),
-    transparent 75%
+    transparent 70%
   );
-  z-index: 0;
   pointer-events: none;
-  animation: flutuar 4s ease-in-out infinite alternate;
+  animation: flutuar 6s ease-in-out infinite alternate;
 }
 
-/* Posicionamento específico no Header */
 .b1 {
   width: 150px;
   height: 150px;
   left: 5%;
   top: -20px;
-  animation-delay: 0s;
 }
 .b2 {
   width: 100px;
   height: 100px;
   right: 10%;
   top: 20px;
-  animation-delay: 1s;
 }
 .b3 {
   width: 130px;
   height: 130px;
   left: 20%;
   bottom: -10px;
-  animation-delay: 2s;
 }
 .b4 {
   width: 90px;
   height: 90px;
   right: 20%;
   bottom: 10px;
-  animation-delay: 0.5s;
 }
 
-/* Efeito de Marca d'água nas Sections */
-section {
-  position: relative;
-  overflow: hidden; /* Garante que as bolhas não criem barra de rolagem lateral */
-}
-
-section::before {
-  content: "";
-  position: absolute;
-  width: 400px;
-  height: 400px;
-  background: radial-gradient(
-    circle,
-    rgba(120, 200, 255, 0.08),
-    transparent 70%
-  );
-  top: -100px;
-  right: -150px;
-  z-index: -1;
-}
-
-section:nth-child(even)::after {
-  content: "";
-  position: absolute;
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(
-    circle,
-    rgba(120, 200, 255, 0.08),
-    transparent 70%
-  );
-  bottom: -50px;
-  left: -100px;
-  z-index: -1;
-}
-
-/* Animação suave de flutuação */
 @keyframes flutuar {
   from {
-    transform: translateY(0) scale(1);
+    transform: translateY(0);
   }
   to {
-    transform: translateY(-15px) scale(1.05);
+    transform: translateY(-20px);
   }
 }
 
-/* Ajuste na Logo e Caricatura para ficarem acima das bolhas */
+/* LOGO */
+
 .logo,
 .caricatura {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
+
 .logo {
   width: 360px;
   max-width: 100%;
@@ -181,7 +151,8 @@ section:nth-child(even)::after {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
-/* titulo */
+/* TITULO */
+
 h1 {
   font-family: "Pacifico", cursive;
   font-size: 60px;
@@ -194,7 +165,8 @@ header p {
   margin-top: 10px;
 }
 
-/* botão */
+/* BOTAO */
+
 .btn {
   display: inline-block;
   margin-top: 25px;
@@ -209,14 +181,16 @@ header p {
 }
 
 .btn:hover {
-  transform: scale(1.05);
+  transform: scale(1.08);
 }
 
-/* sections */
+/* SECTIONS */
+
 section {
   padding: 70px 20px;
   max-width: 1200px;
   margin: auto;
+  position: relative;
 }
 
 h2 {
@@ -226,7 +200,8 @@ h2 {
   color: #0b4d91;
 }
 
-/* serviços */
+/* SERVIÇOS */
+
 .servicos {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -239,13 +214,47 @@ h2 {
   border-radius: 15px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
   transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+/* BRILHO NOS CARDS */
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 200%;
+  height: 200%;
+
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.6),
+    transparent
+  );
+
+  transform: rotate(25deg);
+  transition: 0.6s;
+}
+
+.card:hover::before {
+  top: 100%;
+  left: 100%;
 }
 
 .card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-10px) scale(1.02);
 }
 
-/* galeria */
+.card h3 {
+  color: #0b4d91;
+  margin-bottom: 10px;
+}
+
+/* GALERIA */
+
 .galeria {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -256,9 +265,15 @@ h2 {
   width: 100%;
   border-radius: 12px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  transition: 0.4s;
 }
 
-/* sobre */
+.galeria img:hover {
+  transform: scale(1.05);
+}
+
+/* SOBRE */
+
 .sobre {
   text-align: center;
   font-size: 18px;
@@ -267,7 +282,8 @@ h2 {
   margin: auto;
 }
 
-/* depoimentos */
+/* DEPOIMENTOS */
+
 .depoimentos {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -281,13 +297,15 @@ h2 {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* mapa */
+/* MAPA */
+
 iframe {
   width: 100%;
   border-radius: 10px;
 }
 
-/* whatsapp */
+/* WHATSAPP */
+
 .whatsapp {
   position: fixed;
   bottom: 20px;
@@ -299,17 +317,19 @@ iframe {
   font-size: 18px;
   text-decoration: none;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
 }
 
-/* footer */
+.whatsapp:hover {
+  transform: scale(1.1);
+}
+
+/* FOOTER */
+
 footer {
   background: #0b4d91;
   color: white;
   text-align: center;
   padding: 25px;
   margin-top: 40px;
-}
-.card h3 {
-  color: #0b4d91;
-  margin-bottom: 10px;
 }
