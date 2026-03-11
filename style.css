@@ -6,129 +6,97 @@
 }
 
 body {
-  background: #f8fafc;
+  background: #f5f9ff;
   color: #333;
-  overflow-x: hidden;
+}
+
+/* TRUST BAR */
+
+.trust-bar {
+  background: #0b4d91;
+  color: white;
+  text-align: center;
+  padding: 8px;
+  font-size: 14px;
 }
 
 /* HEADER */
 
-/* HERO HEADER */
-
 header {
-  padding: 110px 20px 90px;
-  position: relative;
-  overflow: hidden;
-
-  background: linear-gradient(120deg, #f8fcff 0%, #eaf6ff 40%, #f4fbff 100%);
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #eef7ff, #ffffff);
 }
-
-/* EFEITO DE LUZ */
-
-header::before {
-  content: "";
-  position: absolute;
-  width: 700px;
-  height: 700px;
-  background: radial-gradient(circle, rgba(0, 150, 255, 0.15), transparent 70%);
-  top: -250px;
-  right: -200px;
-}
-
-/* CONTAINER HERO */
 
 .header-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 40px;
-  max-width: 1100px;
+  max-width: 1200px;
   margin: auto;
-}
-
-/* TEXTO */
-
-.hero-text {
-  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  flex-wrap: wrap;
 }
 
 /* LOGO */
 
 .logo {
-  width: 200px;
-  margin-bottom: 25px;
+  width: 220px;
+  margin-bottom: 15px;
 }
 
-/* TITULO */
+/* HERO TEXT */
+
+.hero-text {
+  max-width: 500px;
+  text-align: center;
+}
+
+/* TITLE */
 
 h1 {
   font-family: "Pacifico", cursive;
   font-size: 64px;
   color: #0b4d91;
-  margin-bottom: 10px;
 }
 
-/* SUBTITULO */
+/* SUBTITLE */
 
 header p {
   font-size: 20px;
+  margin-top: 10px;
   color: #555;
-  margin-bottom: 25px;
 }
 
-/* BOTÃO */
+/* BUTTON */
 
 .btn {
   display: inline-block;
-  padding: 20px 60px;
-  background: linear-gradient(45deg, #25d366, #18b85a);
+  margin-top: 30px;
+  padding: 20px 50px;
+  background: linear-gradient(45deg, #25d366, #1ebe5d);
   color: white;
   font-weight: bold;
-  border-radius: 60px;
+  border-radius: 50px;
   text-decoration: none;
   font-size: 20px;
+  box-shadow: 0 10px 30px rgba(37, 211, 102, 0.45);
   transition: 0.3s;
-  box-shadow: 0 15px 45px rgba(37, 211, 102, 0.45);
 }
 
 .btn:hover {
   transform: scale(1.08);
-  box-shadow: 0 20px 60px rgba(37, 211, 102, 0.6);
-}
-
-/* TRUST */
-
-.trust-bar {
-  margin-top: 25px;
-  font-size: 16px;
-  color: #0b4d91;
-  font-weight: 600;
 }
 
 /* CARICATURA */
 
-.caricatura {
-  width: 380px;
-  border-radius: 50%;
-  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.2);
+.hero-image {
+  text-align: center;
 }
 
-/* RESPONSIVO */
-
-@media (max-width: 900px) {
-  .header-container {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .hero-text {
-    text-align: center;
-  }
-
-  .caricatura {
-    margin: auto;
-    width: 300px;
-  }
+.caricatura {
+  width: 340px;
+  border-radius: 50%;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
 }
 
 /* SECTIONS */
@@ -141,198 +109,15 @@ section {
 
 h2 {
   text-align: center;
-  margin-bottom: 50px;
-  font-size: 34px;
+  margin-bottom: 40px;
+  font-size: 36px;
   color: #0b4d91;
 }
 
-/* SERVIÇOS */
+/* SERVICES */
 
 .servicos {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-}
-
-.card {
-  background: white;
-  padding: 30px;
-  border-radius: 15px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-  transition: 0.35s;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.card::after {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(
-    120deg,
-    transparent,
-    rgba(255, 255, 255, 0.6),
-    transparent
-  );
-  transform: rotate(25deg);
-  transition: 0.6s;
-}
-
-.card:hover::after {
-  top: 100%;
-  left: 100%;
-}
-
-.card:hover {
-  transform: translateY(-12px) scale(1.03);
-}
-/* WHY CHOOSE US */
-
-.diferenciais {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 25px;
-  text-align: center;
-}
-
-.diferencial {
-  background: #f1f5f9;
-  padding: 30px;
-  border-radius: 12px;
-  font-size: 18px;
-}
-
-/* GALERIA */
-
-.galeria {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
-}
-
-.galeria img {
-  width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  transition: 0.3s;
-}
-
-.galeria img:hover {
-  transform: scale(1.05);
-}
-
-/* SOBRE */
-
-.sobre {
-  text-align: center;
-  font-size: 18px;
-  line-height: 1.7;
-  max-width: 900px;
-  margin: auto;
-}
-
-/* DEPOIMENTOS */
-
-.depoimentos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-}
-
-.depoimento {
-  background: white;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-}
-
-/* MAPA */
-
-iframe {
-  width: 100%;
-  border-radius: 10px;
-}
-
-/* WHATSAPP FLOAT */
-
-.whatsapp {
-  position: fixed;
-  bottom: 25px;
-  right: 25px;
-  background: #25d366;
-  color: white;
-  padding: 16px 22px;
-  border-radius: 40px;
-  font-size: 18px;
-  text-decoration: none;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
-  transition: 0.3s;
-}
-
-.whatsapp:hover {
-  transform: scale(1.12);
-}
-
-/* FOOTER */
-
-footer {
-  background: #0b4d91;
-  color: white;
-  text-align: center;
-  padding: 30px;
-  margin-top: 50px;
-}
-.hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(rgba(11, 77, 145, 0.05), rgba(11, 77, 145, 0.15));
-  z-index: 1;
-}
-.before-after {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-  max-width: 900px;
-  margin: auto;
-}
-
-.before,
-.after {
-  position: relative;
-}
-
-.before img,
-.after img {
-  width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-}
-
-.before span,
-.after span {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  background: #0b4d91;
-  color: white;
-  padding: 6px 14px;
-  border-radius: 20px;
-  font-size: 14px;
-}
-.trust-bar {
-  margin-top: 40px;
-  font-size: 18px;
-  color: #0b4d91;
-  font-weight: 600;
-}
-section:nth-child(even) {
-  background: #f1f5f9;
-  border-radius: 20px;
 }
