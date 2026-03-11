@@ -131,16 +131,20 @@ header * {
   z-index: 2;
 }
 
+/* LOGO PRINCIPAL */
+
 .logo {
-  width: 500px;
+  width: 420px;
   max-width: 100%;
 }
 
+/* CARICATURA */
+
 .caricatura {
-  width: 400px;
+  width: 260px;
   max-width: 100%;
   border-radius: 50%;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
 }
 
 /* TITULO */
