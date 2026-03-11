@@ -14,26 +14,24 @@ body {
 
 /* HEADER */
 
+/* HEADER */
+
 header {
   padding: 40px;
   text-align: center;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
   position: relative;
   overflow: hidden;
 
   /* AZULEJOS RETANGULARES */
-  background:
-    linear-gradient(#d0d0d0 3px, transparent 3px),
-    linear-gradient(90deg, #d0d0d0 3px, transparent 3px),
-    linear-gradient(#ffffff, #f4f4f4);
+  background-color: #ffffff;
+  background-image:
+    linear-gradient(#bfbfbf 2px, transparent 2px),
+    linear-gradient(90deg, #bfbfbf 2px, transparent 2px);
 
-  background-size:
-    140px 70px,
-    140px 70px,
-    100% 100%;
+  background-size: 140px 70px;
 }
 
-/* BRILHO DE LIMPEZA */
+/* brilho passando */
 
 header::after {
   content: "";
