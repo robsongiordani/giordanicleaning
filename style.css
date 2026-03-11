@@ -14,14 +14,14 @@ body {
 
 /* HEADER */
 
-hheader {
+header {
   padding: 40px;
   text-align: center;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
   position: relative;
   overflow: hidden;
 
-  /* AZULEJOS DIRETAMENTE NO HEADER */
+  /* AZULEJOS RETANGULARES */
   background:
     linear-gradient(#d0d0d0 3px, transparent 3px),
     linear-gradient(90deg, #d0d0d0 3px, transparent 3px),
@@ -222,14 +222,12 @@ h2 {
   left: -100%;
   width: 200%;
   height: 200%;
-
   background: linear-gradient(
     120deg,
     transparent,
     rgba(255, 255, 255, 0.6),
     transparent
   );
-
   transform: rotate(25deg);
   transition: 0.6s;
 }
