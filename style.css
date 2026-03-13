@@ -204,3 +204,50 @@ footer {
   padding: 25px;
   margin-top: 40px;
 }
+.avaliacoes {
+  padding: 60px 20px;
+  background: #f5f9ff;
+  text-align: center;
+}
+
+.avaliacoes h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #1a4d8f;
+}
+
+.reviews {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.review {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+.review:hover {
+  transform: translateY(-5px);
+}
+
+.stars {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.review p {
+  font-style: italic;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+.review span {
+  font-weight: 600;
+  color: #1a4d8f;
+}
